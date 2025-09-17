@@ -1,0 +1,37 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://c1ir100i1tlao"]
+
+[ext_resource type="FontFile" uid="uid://bkm2rak5t28v7" path="res://art/Fonts/pirateship-font/Pirateship-MV8le.ttf" id="1_wdj27"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gu42s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e4qus"]
+bg_color = Color(0.31, 0.149833, 0, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pdb6s"]
+bg_color = Color(0.85, 0.709183, 0.2465, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ynekw"]
+bg_color = Color(1, 0.805667, 0.47, 0)
+border_color = Color(0.8, 0.8, 0.8, 0)
+
+[resource]
+default_font_size = 90
+Button/colors/font_color = Color(1, 0.716667, 0, 1)
+Button/colors/font_focus_color = Color(1, 0.807843, 0.470588, 1)
+Button/colors/font_hover_color = Color(1, 0.806049, 0.469861, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0.807843, 0.470588, 1)
+Button/colors/font_outline_color = Color(1, 0.807843, 0.470588, 1)
+Button/colors/font_pressed_color = Color(1, 0.807843, 0.470588, 1)
+Button/font_sizes/font_size = 100
+Button/fonts/font = ExtResource("1_wdj27")
+Button/styles/focus = SubResource("StyleBoxFlat_gu42s")
+Button/styles/hover = SubResource("StyleBoxFlat_e4qus")
+Button/styles/normal = SubResource("StyleBoxFlat_pdb6s")
+Button/styles/pressed = SubResource("StyleBoxFlat_ynekw")

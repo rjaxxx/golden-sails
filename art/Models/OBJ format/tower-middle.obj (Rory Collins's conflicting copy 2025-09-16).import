@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://gicoqlgxcp36"
+path="res://.godot/imported/tower-middle.obj-7d1af23b14f8d44f96ace2dbe76ad926.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tower-middle.obj-7d1af23b14f8d44f96ace2dbe76ad926.mesh"]
+
+source_file="res://art/Models/OBJ format/tower-middle.obj"
+dest_files=["res://.godot/imported/tower-middle.obj-7d1af23b14f8d44f96ace2dbe76ad926.mesh", "res://.godot/imported/tower-middle.obj-7d1af23b14f8d44f96ace2dbe76ad926.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

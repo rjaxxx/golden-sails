@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://gh1eia0wip0q"]
+
+[ext_resource type="Texture2D" uid="uid://cxqk8vk6yktij" path="res://art/Colormaps/colormap.png" id="1_0yc3e"]
+[ext_resource type="ArrayMesh" uid="uid://c17rpensqw0s8" path="res://art/Models/Pirate Island.obj" id="1_rjls7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wkrxt"]
+size = Vector3(2.46881, 1.04492, 2.69244)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hv7cd"]
+albedo_texture = ExtResource("1_0yc3e")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_vghgk"]
+points = PackedVector3Array(-0.335622, 0.638, 0.162389, 0.4014, 0.0426388, -1.48208, 0.628245, 0.0426388, -0.0645942, -0.927618, 0.0111, -0.248897, -0.193867, 1.29018, -0.0361997, -0.590711, 0.467933, -1.14169, 0.0328001, -0.0141778, 0.275967, -1.00941, 0.0111, -0.766488, 0.344733, 0.807939, -0.433033, -0.6758, 0.807939, 0.0205891, -0.709395, 0.0111, 0.241897, 0.770178, 0.0426388, -0.376416, 0.0612223, 1.20502, -0.0360277, -0.307378, 0.722906, -0.914878, -0.596706, 0.0161719, -1.17077, -0.569009, 0.764868, -0.755394, 0.259822, 0.779722, -0.659672, 0.571578, 0.0993277, -1.28349, 0.409991, 0.00863199, -1.45133, -0.931067, 0.354555, -0.319628, -0.278956, 1.20489, 0.0489835, -1.01616, 0.0993277, -0.773078, -0.8744, 0.0426388, 0.0489835, 0.735009, 0.0111, -0.303485, -0.760889, 0.694561, -0.206222, -0.250533, 1.29018, -0.0361997, -0.959489, 0.0426388, -0.914878, 0.458067, 0.0426388, -1.48208, -0.449133, 0.807939, -0.8013, 0.0328001, 0.0142944, 0.275967, -0.618801, 0.744907, 0.0927095, -0.193867, 1.29018, 0.0205891)
+
+[node name="island5" type="Area3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.233978, -0.0224609, -0.302399)
+shape = SubResource("BoxShape3D_wkrxt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_hv7cd")
+mesh = ExtResource("1_rjls7")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("ConvexPolygonShape3D_vghgk")

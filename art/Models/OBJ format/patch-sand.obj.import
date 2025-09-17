@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cp44njwluiptd"
+path="res://.godot/imported/patch-sand.obj-a2ab11555e7842259cb4b3f10b02ae18.mesh"
+
+[deps]
+
+files=["res://.godot/imported/patch-sand.obj-a2ab11555e7842259cb4b3f10b02ae18.mesh"]
+
+source_file="res://art/Models/OBJ format/patch-sand.obj"
+dest_files=["res://.godot/imported/patch-sand.obj-a2ab11555e7842259cb4b3f10b02ae18.mesh", "res://.godot/imported/patch-sand.obj-a2ab11555e7842259cb4b3f10b02ae18.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

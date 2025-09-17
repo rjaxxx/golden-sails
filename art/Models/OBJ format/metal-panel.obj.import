@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cxiqsxb24rmpn"
+path="res://.godot/imported/metal-panel.obj-cb99814302fceb6722890af48b9bc6ce.mesh"
+
+[deps]
+
+files=["res://.godot/imported/metal-panel.obj-cb99814302fceb6722890af48b9bc6ce.mesh"]
+
+source_file="res://art/Models/OBJ format/metal-panel.obj"
+dest_files=["res://.godot/imported/metal-panel.obj-cb99814302fceb6722890af48b9bc6ce.mesh", "res://.godot/imported/metal-panel.obj-cb99814302fceb6722890af48b9bc6ce.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

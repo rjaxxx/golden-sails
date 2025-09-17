@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://8a3jdajk8oul"
+path="res://.godot/imported/campfire-fishing-stand.obj-d6ea406332f99fd14ab1918c1669a246.mesh"
+
+[deps]
+
+files=["res://.godot/imported/campfire-fishing-stand.obj-d6ea406332f99fd14ab1918c1669a246.mesh"]
+
+source_file="res://art/Models/OBJ format/campfire-fishing-stand.obj"
+dest_files=["res://.godot/imported/campfire-fishing-stand.obj-d6ea406332f99fd14ab1918c1669a246.mesh", "res://.godot/imported/campfire-fishing-stand.obj-d6ea406332f99fd14ab1918c1669a246.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

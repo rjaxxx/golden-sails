@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://da8y5lvxhqk6c"
+path="res://.godot/imported/ship-ghost.obj-362034f841d14a0fe7523942413ffe87.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ship-ghost.obj-362034f841d14a0fe7523942413ffe87.mesh"]
+
+source_file="res://art/Models/OBJ format/ship-ghost.obj"
+dest_files=["res://.godot/imported/ship-ghost.obj-362034f841d14a0fe7523942413ffe87.mesh", "res://.godot/imported/ship-ghost.obj-362034f841d14a0fe7523942413ffe87.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

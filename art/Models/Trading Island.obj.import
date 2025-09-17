@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0muglaobk07w"
+path="res://.godot/imported/Trading Island.obj-d2127b37a4c1ef9a2da4cef110b16338.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Trading Island.obj-d2127b37a4c1ef9a2da4cef110b16338.mesh"]
+
+source_file="res://art/Models/Trading Island.obj"
+dest_files=["res://.godot/imported/Trading Island.obj-d2127b37a4c1ef9a2da4cef110b16338.mesh", "res://.godot/imported/Trading Island.obj-d2127b37a4c1ef9a2da4cef110b16338.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

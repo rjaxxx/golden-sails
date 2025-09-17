@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://basuqtjrn65ii"
+path="res://.godot/imported/Tree Island (1).obj-1961565b77af72b7ee8e51ae6a4770db.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Tree Island (1).obj-1961565b77af72b7ee8e51ae6a4770db.mesh"]
+
+source_file="res://art/Models/Tree Island (1).obj"
+dest_files=["res://.godot/imported/Tree Island (1).obj-1961565b77af72b7ee8e51ae6a4770db.mesh", "res://.godot/imported/Tree Island (1).obj-1961565b77af72b7ee8e51ae6a4770db.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

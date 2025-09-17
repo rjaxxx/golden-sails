@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bo8gfo3fq7n5p"
+path="res://.godot/imported/workbench-anvil.obj-4d874a5394cde8bce4b1cdc4d0b245aa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/workbench-anvil.obj-4d874a5394cde8bce4b1cdc4d0b245aa.mesh"]
+
+source_file="res://art/Models/OBJ format/workbench-anvil.obj"
+dest_files=["res://.godot/imported/workbench-anvil.obj-4d874a5394cde8bce4b1cdc4d0b245aa.mesh", "res://.godot/imported/workbench-anvil.obj-4d874a5394cde8bce4b1cdc4d0b245aa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

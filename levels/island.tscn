@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqd4tyd00b4se"]
+
+[ext_resource type="ArrayMesh" uid="uid://ctg3biqff5su4" path="res://art/Models/OBJ format/rock-flat-grass.obj" id="1_is00e"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wh4fl"]
+size = Vector3(1.79433, 1, 1.47398)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_nphau"]
+points = PackedVector3Array(0.694725, 0.0488041, 0.344966, -0.406479, 0, -0.672262, -0.734123, 0, -0.420163, 0.223644, 0.241022, -0.498856, -0.570045, 0.0992833, 0.663589, -0.456889, 0.241022, 0.209811, 0.626667, 2.77556e-17, -0.495728, -0.258289, -0.0141778, 0.720311, 0.734, 0.155939, 0.266533, -0.7404, 0.184292, -0.357122, -0.428467, 0.0992833, -0.725744, 0.648911, 0.184292, -0.442133, 0.803358, 0, 0.134198, -0.699997, 0.0196379, 0.465316, -0.286534, 0.241022, 0.323256, -0.7404, 0.184292, 0.181522, -0.864958, 0.0191885, -0.313152, 0.2071, 0.0477216, -0.674048, 0.3654, 0.241022, -0.357122, -0.286534, 0.0992833, 0.663589, 0.223644, 0.184292, -0.640733, 0.851848, 0.0199223, 0.0898325, 0.666038, 0.0464895, -0.525657, -0.3432, 0.184292, -0.584011, 0.3368, 0.0992833, 0.493278, 0.677195, 0, 0.361022, 0.676978, 0.184292, 0.0963667, -0.201622, 0.0425528, -0.754178, -0.734123, 0, 0.184617, 0.308556, 0.184292, 0.351689, -0.797067, 0.0992833, -0.442133, 0.198439, -1.38778e-17, -0.646988)
+
+[node name="Area3D" type="Area3D"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0465012, 0, 0.00268739)
+shape = SubResource("BoxShape3D_wh4fl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_is00e")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="CharacterBody3D"]
+shape = SubResource("ConvexPolygonShape3D_nphau")

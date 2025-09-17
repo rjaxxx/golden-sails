@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5x4ql3bltrr7"
+path="res://.godot/imported/tower-complete-large.obj-20fd83716538fc6a9c68f93bb9fc76bb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/tower-complete-large.obj-20fd83716538fc6a9c68f93bb9fc76bb.mesh"]
+
+source_file="res://art/Models/OBJ format/tower-complete-large.obj"
+dest_files=["res://.godot/imported/tower-complete-large.obj-20fd83716538fc6a9c68f93bb9fc76bb.mesh", "res://.godot/imported/tower-complete-large.obj-20fd83716538fc6a9c68f93bb9fc76bb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
