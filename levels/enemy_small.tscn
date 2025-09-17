@@ -1,16 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://cnlu2ti6425d7"]
+[gd_scene load_steps=6 format=3 uid="uid://cnlu2ti6425d7"]
 
-[ext_resource type="ArrayMesh" uid="uid://bb76ueu4cd3t7" path="res://art/Models/OBJ format/ship-pirate-small.obj" id="1_8nm0f"]
+[ext_resource type="ArrayMesh" uid="uid://gd26dk0o1f2a" path="res://art/Models/OBJ format/ship-pirate-small.obj" id="1_8nm0f"]
 [ext_resource type="Script" path="res://scripts/enemy_small.gd" id="1_djued"]
-[ext_resource type="Script" path="res://scripts/survey.gd" id="3_8lw11"]
 [ext_resource type="Script" path="res://scripts/enemy_hitbox.gd" id="4_yp4ej"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lgclv"]
 size = Vector3(4.50537, 3.82349, 7.52514)
-
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_vmso7"]
-height = 10.0
-radius = 50.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kfefs"]
 size = Vector3(5, 5, 10)
@@ -26,12 +21,6 @@ shape = SubResource("BoxShape3D_lgclv")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_8nm0f")
 
-[node name="Area3D" type="Area3D" parent="."]
-script = ExtResource("3_8lw11")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-shape = SubResource("CylinderShape3D_vmso7")
-
 [node name="Area3D2" type="Area3D" parent="."]
 collision_layer = 2
 script = ExtResource("4_yp4ej")
@@ -40,6 +29,4 @@ script = ExtResource("4_yp4ej")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
 shape = SubResource("BoxShape3D_kfefs")
 
-[connection signal="body_entered" from="Area3D" to="Area3D" method="_on_body_entered"]
-[connection signal="body_exited" from="Area3D" to="Area3D" method="_on_body_exited"]
 [connection signal="area_entered" from="Area3D2" to="Area3D2" method="_on_area_entered"]

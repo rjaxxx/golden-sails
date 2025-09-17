@@ -1,17 +1,14 @@
-extends Label
+extends Sprite2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready():
+func _ready() -> void:
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta):
+func _process(delta: float) -> void:
 	if Globals.coin_ui == true:
 		visible = true
-		if Globals.coin_count > 16:
-			var coins = Globals.coin_count - 16
-			text = "+ " + str(coins)
 	else:
 		visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://y0a40ma4iaoc"]
+[gd_scene load_steps=39 format=3 uid="uid://y0a40ma4iaoc"]
 
 [ext_resource type="PackedScene" uid="uid://cqd4tyd00b4se" path="res://levels/island.tscn" id="1_elnhl"]
 [ext_resource type="Script" path="res://scripts/map.gd" id="1_xnumj"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://scripts/camera_pivot.gd" id="2_d10b5"]
 [ext_resource type="Script" path="res://scripts/test_island.gd" id="3_is7uo"]
 [ext_resource type="Shader" path="res://levels/water4.gdshader" id="5_6oxil"]
+[ext_resource type="Script" path="res://scripts/island.gd" id="5_gndvo"]
 [ext_resource type="PackedScene" uid="uid://cnlu2ti6425d7" path="res://levels/enemy_small.tscn" id="7_e3p2m"]
 [ext_resource type="FontFile" uid="uid://bkm2rak5t28v7" path="res://art/Fonts/pirateship-font/Pirateship-MV8le.ttf" id="8_lnjc6"]
 [ext_resource type="Script" path="res://label.gd" id="8_pp6io"]
@@ -19,11 +20,16 @@
 [ext_resource type="Script" path="res://scripts/trading.gd" id="17_6do7m"]
 [ext_resource type="PackedScene" uid="uid://datid0ig57qr3" path="res://levels/island_4.tscn" id="17_7c2f1"]
 [ext_resource type="Texture2D" uid="uid://kjsqvoa1g3qu" path="res://art/town1.png" id="18_1cb87"]
+[ext_resource type="Script" path="res://scripts/rock.gd" id="19_142w6"]
 [ext_resource type="Texture2D" uid="uid://8fncsi2p5p5g" path="res://art/flag.png" id="19_vf80p"]
 [ext_resource type="AudioStream" uid="uid://dyswtj0jk37yi" path="res://art/soundtrack.mp3" id="21_7k4id"]
 [ext_resource type="Texture2D" uid="uid://cifm6lhtkwgr0" path="res://art/coin.png" id="22_r1ech"]
 [ext_resource type="Script" path="res://scripts/gold_count.gd" id="23_e3gdu"]
 [ext_resource type="Script" path="res://scripts/wood.gd" id="24_knqsb"]
+[ext_resource type="Texture2D" uid="uid://8a15o2ojyau1" path="res://art/gold.png" id="25_ietxy"]
+[ext_resource type="Script" path="res://scripts/extra_gold.gd" id="26_6qmll"]
+[ext_resource type="PackedScene" uid="uid://cf7jrs25vk5st" path="res://levels/rocks.tscn" id="28_vs44p"]
+[ext_resource type="Texture2D" uid="uid://10klp1vvf5ll" path="res://art/rock.png" id="30_s171s"]
 
 [sub_resource type="Sky" id="Sky_lyx7l"]
 
@@ -97,24 +103,24 @@ current = true
 size = 60.0
 
 [node name="Island" parent="." instance=ExtResource("1_elnhl")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 50, 6, -50)
-script = ExtResource("3_is7uo")
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 300.911, 6, -50)
+script = ExtResource("5_gndvo")
 
 [node name="Island2" parent="." instance=ExtResource("1_elnhl")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 250, 6, -250)
-script = ExtResource("3_is7uo")
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 114.997, 6, -250)
+script = ExtResource("5_gndvo")
 
 [node name="Island3" parent="." instance=ExtResource("1_elnhl")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -350, 6, -300)
-script = ExtResource("3_is7uo")
+script = ExtResource("5_gndvo")
 
 [node name="Island4" parent="." instance=ExtResource("1_elnhl")]
-transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -250, 6, 350)
-script = ExtResource("3_is7uo")
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -496.745, 6, 350)
+script = ExtResource("5_gndvo")
 
 [node name="Island5" parent="." instance=ExtResource("1_elnhl")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 350, 6, 400)
-script = ExtResource("3_is7uo")
+script = ExtResource("5_gndvo")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_3bote")
@@ -125,6 +131,7 @@ mesh = SubResource("PlaneMesh_u2gq5")
 
 [node name="Enemy" parent="." instance=ExtResource("7_e3p2m")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 6.0
@@ -218,6 +225,7 @@ texture = ExtResource("13_rxa8h")
 
 [node name="Tree Island" parent="." instance=ExtResource("13_rsbpr")]
 transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 250, 5, 150)
+script = ExtResource("3_is7uo")
 
 [node name="island 2 icon" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -229,6 +237,7 @@ script = ExtResource("17_6do7m")
 
 [node name="rock island" parent="." instance=ExtResource("17_7c2f1")]
 transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, -300, 0, 150)
+script = ExtResource("19_142w6")
 
 [node name="island 3 icon" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
@@ -313,14 +322,14 @@ position = Vector2(1207, 800)
 texture = ExtResource("22_r1ech")
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 6.0
-offset_top = 35.0
-offset_right = 97.0
-offset_bottom = 70.0
+offset_left = 704.0
+offset_top = 835.0
+offset_right = 795.0
+offset_bottom = 870.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("8_lnjc6")
 theme_override_font_sizes/font_size = 30
-text = "FPS: 0"
+text = "+0"
 script = ExtResource("23_e3gdu")
 
 [node name="Label3" type="Label" parent="."]
@@ -334,11 +343,200 @@ theme_override_font_sizes/font_size = 30
 text = "FPS: 0"
 script = ExtResource("24_knqsb")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(659, 849)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("25_ietxy")
+script = ExtResource("26_6qmll")
+
+[node name="Enemy2" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy3" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy4" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy5" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy6" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy7" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy8" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy9" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy10" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy11" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy12" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy13" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy14" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy15" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Enemy16" parent="." instance=ExtResource("7_e3p2m")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+enemy_scene = ExtResource("7_e3p2m")
+
+[node name="Rocks" parent="." instance=ExtResource("28_vs44p")]
+transform = Transform3D(-2.18557e-06, 0, 50, 0, 50, 0, -50, 0, -2.18557e-06, 0, 5, 0)
+
+[node name="inventory ui3" type="Sprite2D" parent="."]
+position = Vector2(50, 20)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("12_bu8t6")
+offset = Vector2(960, 540)
+
+[node name="Sprite2D" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(712, 315)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(875, 315)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D3" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(1040, 315)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D4" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(1207, 315)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D5" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(712, 475)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D6" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(875, 475)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D7" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(1040, 475)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D8" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(1207, 475)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D9" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(712, 640)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D10" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(875, 640)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D11" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(1040, 640)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D12" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(1207, 640)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D13" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(712, 800)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D14" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(875, 800)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D15" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(1040, 800)
+texture = ExtResource("30_s171s")
+
+[node name="Sprite2D16" type="Sprite2D" parent="inventory ui3"]
+position = Vector2(1207, 800)
+texture = ExtResource("30_s171s")
+
+[node name="Island6" parent="." instance=ExtResource("1_elnhl")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -56.2179, 6, 482.835)
+script = ExtResource("5_gndvo")
+
+[node name="Island7" parent="." instance=ExtResource("1_elnhl")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -239.198, 6, -608.372)
+script = ExtResource("5_gndvo")
+
+[node name="Island8" parent="." instance=ExtResource("1_elnhl")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 509.087, 6, -32.6854)
+script = ExtResource("5_gndvo")
+
+[node name="Island9" parent="." instance=ExtResource("1_elnhl")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -564.54, 6, -31.2806)
+script = ExtResource("5_gndvo")
+
+[node name="Island10" parent="." instance=ExtResource("1_elnhl")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 388.599, 6, -519.65)
+script = ExtResource("5_gndvo")
+
+[node name="Island11" parent="." instance=ExtResource("1_elnhl")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 38.7491, 6, 253.977)
+script = ExtResource("5_gndvo")
+
+[node name="Island12" parent="." instance=ExtResource("1_elnhl")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, -136.284, 6, -60.6775)
+script = ExtResource("5_gndvo")
+
 [connection signal="body_entered" from="Island" to="Island" method="_on_body_entered"]
 [connection signal="body_exited" from="Island" to="Island" method="_on_body_exited"]
 [connection signal="body_entered" from="Island2" to="Island2" method="_on_body_entered"]
+[connection signal="body_exited" from="Island2" to="Island2" method="_on_body_exited"]
 [connection signal="body_entered" from="Island3" to="Island3" method="_on_body_entered"]
+[connection signal="body_exited" from="Island3" to="Island3" method="_on_body_exited"]
 [connection signal="body_entered" from="Island4" to="Island4" method="_on_body_entered"]
+[connection signal="body_exited" from="Island4" to="Island4" method="_on_body_exited"]
 [connection signal="body_entered" from="Island5" to="Island5" method="_on_body_entered"]
+[connection signal="body_exited" from="Island5" to="Island5" method="_on_body_exited"]
+[connection signal="body_entered" from="Tree Island" to="Tree Island" method="_on_body_entered"]
+[connection signal="body_exited" from="Tree Island" to="Tree Island" method="_on_body_exited"]
 [connection signal="body_entered" from="trading island" to="trading island" method="_on_body_entered"]
 [connection signal="body_exited" from="trading island" to="trading island" method="_on_body_exited"]
+[connection signal="body_entered" from="rock island" to="rock island" method="_on_body_entered"]
+[connection signal="body_exited" from="rock island" to="rock island" method="_on_body_exited"]
+[connection signal="body_entered" from="Island6" to="Island6" method="_on_body_entered"]
+[connection signal="body_exited" from="Island6" to="Island6" method="_on_body_exited"]
+[connection signal="body_entered" from="Island7" to="Island7" method="_on_body_entered"]
+[connection signal="body_exited" from="Island7" to="Island7" method="_on_body_exited"]
+[connection signal="body_entered" from="Island8" to="Island8" method="_on_body_entered"]
+[connection signal="body_exited" from="Island8" to="Island8" method="_on_body_exited"]
+[connection signal="body_entered" from="Island9" to="Island9" method="_on_body_entered"]
+[connection signal="body_exited" from="Island9" to="Island9" method="_on_body_exited"]
+[connection signal="body_entered" from="Island10" to="Island10" method="_on_body_entered"]
+[connection signal="body_exited" from="Island10" to="Island10" method="_on_body_exited"]
+[connection signal="body_entered" from="Island11" to="Island11" method="_on_body_entered"]
+[connection signal="body_exited" from="Island11" to="Island11" method="_on_body_exited"]
+[connection signal="body_entered" from="Island12" to="Island12" method="_on_body_entered"]
+[connection signal="body_exited" from="Island12" to="Island12" method="_on_body_exited"]
