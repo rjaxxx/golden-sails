@@ -6,6 +6,10 @@ extends Area3D
 var reveal_timer: Timer
 var current_index := 0
 
+func _process(_delta):
+	if Globals.has_lost == true:
+		inventory.visible = false
+
 func _ready():
 	inventory.visible = false
 	_update_icons()
@@ -21,7 +25,7 @@ func _on_body_entered(body):
 	if body.is_in_group("player"):
 		inventory.visible = true
 		_update_icons()
-		current_index = Globals.wood_count
+		current_index = Globals.rock_count
 		if Globals.rock_count < rock_icons.size():
 			reveal_timer.start()
 
@@ -33,7 +37,7 @@ func _on_body_exited(body):
 func _on_reveal_timeout():
 	if current_index < rock_icons.size():
 		rock_icons[current_index].visible = true
-		Globals.wood_count += 1
+		Globals.rock_count += 1
 		current_index += 1
 	else:
 		reveal_timer.stop()

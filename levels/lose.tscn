@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://cn1n28rf76eb0"]
+
+[ext_resource type="Theme" uid="uid://c1ir100i1tlao" path="res://art/button_theme.tres" id="2_v5jxv"]
+[ext_resource type="Script" path="res://scripts/play.gd" id="3_r7gan"]
+[ext_resource type="Script" path="res://scripts/controls.gd" id="4_rtdjf"]
+[ext_resource type="Script" path="res://scripts/quit.gd" id="5_vrp4t"]
+[ext_resource type="FontFile" uid="uid://cl5n2khc2tq3k" path="res://art/Fonts/the-rum-is-gone-font/TheRumIsGone-Wy1nG.ttf" id="6_pyxl6"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="7_3jip4"]
+[ext_resource type="Texture2D" uid="uid://bfyab3mmp3e0r" path="res://art/title.png" id="8_5gex7"]
+
+[sub_resource type="Theme" id="Theme_0l0kf"]
+
+[node name="Lose" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = -200.0
+offset_top = 200.0
+offset_right = 807.0
+offset_bottom = 751.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_v5jxv")
+
+[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_0l0kf")
+text = "Play"
+alignment = 0
+script = ExtResource("3_r7gan")
+
+[node name="Controls" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Controls"
+alignment = 0
+script = ExtResource("4_rtdjf")
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+alignment = 0
+script = ExtResource("5_vrp4t")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 684.0
+offset_right = 1347.0
+offset_bottom = 984.0
+theme_override_colors/default_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/normal_font = ExtResource("6_pyxl6")
+theme_override_font_sizes/normal_font_size = 100
+text = "Score: 
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("7_3jip4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(752, 127)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("8_5gex7")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Controls" to="MarginContainer/VBoxContainer/Controls" method="_on_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="MarginContainer/VBoxContainer/Quit" method="_on_pressed"]

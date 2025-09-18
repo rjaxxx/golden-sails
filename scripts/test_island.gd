@@ -6,6 +6,10 @@ extends Area3D
 var reveal_timer: Timer
 var current_index := 0
 
+func _process(_delta):
+	if Globals.has_lost == true:
+		inventory.visible = false
+
 func _ready():
 	inventory.visible = false
 	_update_icons()

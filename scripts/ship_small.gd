@@ -20,6 +20,7 @@ var shoot_cooldown = 1.0
 var time_since_last_shot = 0.0
 
 func _ready():
+	get_tree().paused = false
 	global_position = Vector3(player_x, player_y, player_z)
 
 func _physics_process(delta):
@@ -51,8 +52,9 @@ func _physics_process(delta):
 		move_and_slide()
 	
 	if Globals.has_lost == true:
-		global_position = Vector3(player_x, player_y, player_z)
-
+		get_tree().paused = true
+		get_tree().change_scene_to_file("res://levels/lose.tscn")
+		
 
 func shoot_cannonball():
 	var cannonball = cannonball_scene.instantiate() as Area3D

@@ -8,7 +8,7 @@ var direction: Vector3 = Vector3.ZERO
 func _ready():
 	var mesh = $MeshInstance3D
 	if mesh:
-		mesh.scale = Vector3(2, 2, 2)
+		mesh.scale = Vector3(3, 3, 3)
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

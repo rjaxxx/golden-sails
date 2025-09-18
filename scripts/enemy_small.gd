@@ -1,8 +1,9 @@
+
 extends CharacterBody3D
 
 @export var speed: float = 15.0
 @export var enemy_scene: PackedScene
-@export var spawn_interval: float = 5.0  # seconds
+@export var spawn_interval: float = 7.5  # seconds
 
 var player: CharacterBody3D
 
