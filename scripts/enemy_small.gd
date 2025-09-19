@@ -8,6 +8,7 @@ extends CharacterBody3D
 var player: CharacterBody3D
 
 func _ready():
+	global_position = Vector3(0, 5, -200)
 	player = get_node("/root/Map/Player")
 	var timer = Timer.new()
 	timer.wait_time = spawn_interval
@@ -17,6 +18,9 @@ func _ready():
 	timer.connect("timeout", Callable(self, "_spawn_clone"))
 
 func _physics_process(delta):
+	if Globals.has_lost == true:
+			global_position = Vector3(0, 5, -200)
+	
 	if not is_inside_tree() or player == null or not Globals.play_button_pressed:
 		return
 

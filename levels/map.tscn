@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://y0a40ma4iaoc"]
+[gd_scene load_steps=39 format=3 uid="uid://y0a40ma4iaoc"]
 
 [ext_resource type="PackedScene" uid="uid://cqd4tyd00b4se" path="res://levels/island.tscn" id="1_elnhl"]
 [ext_resource type="Script" path="res://scripts/map.gd" id="1_xnumj"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://smle8o3xn473" path="res://art/Inventory wip.png" id="12_bu8t6"]
 [ext_resource type="PackedScene" uid="uid://cncq70sqs3mfd" path="res://levels/island2.tscn" id="13_rsbpr"]
 [ext_resource type="Texture2D" uid="uid://ciyeqfhtcdx3l" path="res://art/wood.png" id="13_rxa8h"]
+[ext_resource type="Script" path="res://scripts/inventory_ui.gd" id="13_t5esx"]
 [ext_resource type="PackedScene" uid="uid://bx7spmov5ekyj" path="res://levels/island_3.tscn" id="16_empqb"]
 [ext_resource type="Script" path="res://scripts/trading.gd" id="17_6do7m"]
 [ext_resource type="PackedScene" uid="uid://datid0ig57qr3" path="res://levels/island_4.tscn" id="17_7c2f1"]
@@ -129,7 +130,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 mesh = SubResource("PlaneMesh_u2gq5")
 
 [node name="Enemy" parent="." instance=ExtResource("7_e3p2m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 5, -100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, -200)
 enemy_scene = ExtResource("7_e3p2m")
 
 [node name="Label" type="Label" parent="."]
@@ -153,10 +154,12 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_oamtu")
 
 [node name="inventory ui" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(50, 20)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("12_bu8t6")
 offset = Vector2(960, 540)
+script = ExtResource("13_t5esx")
 
 [node name="Sprite2D" type="Sprite2D" parent="inventory ui"]
 position = Vector2(712, 315)
@@ -251,10 +254,12 @@ stream = ExtResource("21_7k4id")
 autoplay = true
 
 [node name="inventory ui2" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(50, 20)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("12_bu8t6")
 offset = Vector2(960, 540)
+script = ExtResource("13_t5esx")
 
 [node name="Sprite2D" type="Sprite2D" parent="inventory ui2"]
 position = Vector2(712, 315)
@@ -321,6 +326,7 @@ position = Vector2(1207, 800)
 texture = ExtResource("22_r1ech")
 
 [node name="Label2" type="Label" parent="."]
+z_index = -1
 offset_left = 704.0
 offset_top = 835.0
 offset_right = 795.0
@@ -332,6 +338,7 @@ text = "+0"
 script = ExtResource("23_e3gdu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(659, 849)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("25_ietxy")
@@ -341,10 +348,12 @@ script = ExtResource("26_6qmll")
 transform = Transform3D(-2.18557e-06, 0, 50, 0, 50, 0, -50, 0, -2.18557e-06, 0, 5, 0)
 
 [node name="inventory ui3" type="Sprite2D" parent="."]
+z_index = -1
 position = Vector2(50, 20)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("12_bu8t6")
 offset = Vector2(960, 540)
+script = ExtResource("13_t5esx")
 
 [node name="Sprite2D" type="Sprite2D" parent="inventory ui3"]
 position = Vector2(712, 315)

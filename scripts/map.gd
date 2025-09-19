@@ -13,6 +13,10 @@ extends Node3D
 var map_visible := false
 
 func _ready():
+	Globals.has_lost = false
+	Globals.coin_count = 0
+	Globals.wood_count = 0
+	Globals.rock_count = 0
 	map_background.visible = false
 	player_icon.visible = false
 	island2_icon.visible = false
@@ -29,6 +33,11 @@ func _process(delta):
 
 	if map_visible:
 		update_map_icon()
+		
+	if Globals.has_lost == true:
+		map_visible = false
+		Globals.wood_count = 0
+		Globals.rock_count = 0
 
 func toggle_map():
 	map_visible = !map_visible

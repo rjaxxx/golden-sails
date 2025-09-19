@@ -30,9 +30,11 @@ offset_right = 1377.0
 offset_bottom = 662.0
 theme_override_colors/default_color = Color(1, 0.717647, 0, 1)
 theme_override_fonts/normal_font = ExtResource("2_3neow")
-theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/normal_font_size = 40
 text = "Movement:
 WASD / Arrow Keys
+SPACE to shoot cannon
+M to view map
 
 ESC to Exit
 "

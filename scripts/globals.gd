@@ -8,9 +8,11 @@ var wood_count: int = 0
 var rock_count: int = 0
 var coin_count: int = 0
 var coin_ui
+var scoreui
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.scoreui = false
 	Globals.play_button_pressed = false
 	Globals.survey_entered = false
 	Globals.shooting = false

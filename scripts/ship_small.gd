@@ -16,11 +16,10 @@ var player_x = 32
 var player_y = 5
 var player_z = 0
 
-var shoot_cooldown = 1.0
+var shoot_cooldown = 0.5
 var time_since_last_shot = 0.0
 
 func _ready():
-	get_tree().paused = false
 	global_position = Vector3(player_x, player_y, player_z)
 
 func _physics_process(delta):
@@ -29,6 +28,7 @@ func _physics_process(delta):
 		time_since_last_shot += delta
 	
 	if Globals.play_button_pressed == true:
+		global_position = Vector3(player_x, player_y, player_z)
 		var move_input = Input.get_action_strength("ui_up")
 		var turn_input = Input.get_action_strength("ui_left") - Input.get_action_strength("ui_right")
 
@@ -52,8 +52,7 @@ func _physics_process(delta):
 		move_and_slide()
 	
 	if Globals.has_lost == true:
-		get_tree().paused = true
-		get_tree().change_scene_to_file("res://levels/lose.tscn")
+		get_tree().change_scene_to_file("res://levels/menu.tscn")
 		
 
 func shoot_cannonball():

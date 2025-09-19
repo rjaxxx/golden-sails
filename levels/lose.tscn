@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cn1n28rf76eb0"]
+[gd_scene load_steps=10 format=3 uid="uid://cn1n28rf76eb0"]
 
+[ext_resource type="Script" path="res://scripts/lose.gd" id="1_tgqwh"]
 [ext_resource type="Theme" uid="uid://c1ir100i1tlao" path="res://art/button_theme.tres" id="2_v5jxv"]
 [ext_resource type="Script" path="res://scripts/play.gd" id="3_r7gan"]
 [ext_resource type="Script" path="res://scripts/controls.gd" id="4_rtdjf"]
@@ -17,6 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tgqwh")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 0

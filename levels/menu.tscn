@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://7fbhtm5gycca"]
+[gd_scene load_steps=10 format=3 uid="uid://7fbhtm5gycca"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_07ppo"]
 [ext_resource type="Theme" uid="uid://c1ir100i1tlao" path="res://art/button_theme.tres" id="1_l1n47"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://scripts/controls.gd" id="3_ptaw3"]
 [ext_resource type="Script" path="res://scripts/quit.gd" id="4_pknsm"]
 [ext_resource type="Texture2D" uid="uid://bfyab3mmp3e0r" path="res://art/title.png" id="7_3cfls"]
+[ext_resource type="Script" path="res://scripts/score.gd" id="8_enk8h"]
 
 [sub_resource type="Theme" id="Theme_0l0kf"]
 
@@ -51,26 +52,26 @@ text = "Quit"
 alignment = 0
 script = ExtResource("4_pknsm")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 20.0
-offset_top = 20.0
-offset_right = 1334.0
-offset_bottom = 208.0
-theme_override_colors/default_color = Color(1, 0.717647, 0, 1)
-theme_override_fonts/normal_font = ExtResource("3_2ipq2")
-theme_override_font_sizes/normal_font_size = 150
-text = "Golden Sails
-"
-fit_content = true
-scroll_active = false
-autowrap_mode = 0
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(752, 127)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("7_3cfls")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 684.0
+offset_right = 1347.0
+offset_bottom = 984.0
+theme_override_colors/default_color = Color(1, 0.717647, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_2ipq2")
+theme_override_font_sizes/normal_font_size = 100
+text = "Score: 
+"
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("8_enk8h")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="MarginContainer/VBoxContainer/Play" method="_on_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Controls" to="MarginContainer/VBoxContainer/Controls" method="_on_pressed"]
