@@ -9,6 +9,7 @@ var rock_count: int = 0
 var coin_count: int = 0
 var coin_ui
 var scoreui
+var enemies_spawned: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -28,7 +28,6 @@ func _physics_process(delta):
 		time_since_last_shot += delta
 	
 	if Globals.play_button_pressed == true:
-		global_position = Vector3(player_x, player_y, player_z)
 		var move_input = Input.get_action_strength("ui_up")
 		var turn_input = Input.get_action_strength("ui_left") - Input.get_action_strength("ui_right")
 

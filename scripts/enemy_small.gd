@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 @export var speed: float = 15.0
 @export var enemy_scene: PackedScene
-@export var spawn_interval: float = 7.5  # seconds
+@export var spawn_interval: float = 5  # seconds
 
 var player: CharacterBody3D
 
@@ -18,6 +18,7 @@ func _ready():
 	timer.connect("timeout", Callable(self, "_spawn_clone"))
 
 func _physics_process(delta):
+	global_position.y = 5
 	if Globals.has_lost == true:
 			global_position = Vector3(0, 5, -200)
 	
@@ -33,16 +34,23 @@ func _physics_process(delta):
 
 func _spawn_clone():
 	if enemy_scene == null or get_parent() == null:
+		if Globals.enemies_spawned >= 10:
+			Globals.enemies_spawned -= 1
+			print(Globals.enemies_spawned)
+			return
 		return
 
 	call_deferred("_do_spawn")
 
 func _do_spawn():
-	var enemy_x = randi_range(-1024, 1024)
+	var enemy_x = randi_range(-512, 512)
 	var enemy_y = 5
-	var enemy_z = randi_range(-1024, 1024)
+	var enemy_z = randi_range(-512, 512)
 
 	var new_enemy = enemy_scene.instantiate()
 
 	get_parent().add_child(new_enemy)
 	new_enemy.global_position = Vector3(enemy_x, enemy_y, enemy_z)
+	Globals.enemies_spawned += 1
+	print(Globals.enemies_spawned)
+	

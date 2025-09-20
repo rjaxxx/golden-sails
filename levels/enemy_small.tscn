@@ -4,8 +4,9 @@
 [ext_resource type="Script" path="res://scripts/enemy_small.gd" id="1_djued"]
 [ext_resource type="Script" path="res://scripts/enemy_hitbox.gd" id="4_yp4ej"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_lgclv"]
-size = Vector3(4.50537, 3.82349, 7.52514)
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hmocp"]
+radius = 5.0
+height = 10.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_kfefs"]
 size = Vector3(5, 5, 10)
@@ -16,7 +17,7 @@ script = ExtResource("1_djued")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0322941, 2.40335, -0.45791)
-shape = SubResource("BoxShape3D_lgclv")
+shape = SubResource("CapsuleShape3D_hmocp")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_8nm0f")
